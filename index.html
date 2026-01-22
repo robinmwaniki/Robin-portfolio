@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio — Robin Mwaniki. Web developer / Designer / etc." />
+  <title>Robin's— Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="#">Robin Mwaniki</a></h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div>
+          <h2>Hi, I’m Robin Mwaniki.</h2>
+          <p class="lead">I build accessible, responsive websites and web apps. I’m focused on clean UI and fast performance.</p>
+          <p class="cta">
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn outline" href="mailto:robinmwaniki3@.com">Hire me</a>
+          </p>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Replace with an image or SVG -->
+          <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+            <rect width="200" height="200" rx="12" fill="#E6EEF8"></rect>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#2B6CB0" font-family="Inter, sans-serif" font-size="18">Your Photo</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About</h3>
+      <p>Short paragraph about you. Mention where you’re based, the tech you use (HTML, CSS, JavaScript, React, etc.), and what you enjoy building.</p>
+      <p>Quick highlights: performance, accessibility (a11y), responsive design, and good developer experience.</p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Project One</h4>
+          <p>Short description of the project and the tech used.</p>
+          <p class="tags">HTML • CSS • JS</p>
+          <p><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
+        </article>
+
+        <article class="card">
+          <h4>Project Two</h4>
+          <p>Short description of the project and the tech used.</p>
+          <p class="tags">React • API</p>
+          <p><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
+        </article>
+
+        <!-- Add more project cards -->
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>If you’d like to work together, email me at <a href="mailto:robinmwaniki3@.com">robinmwaniki3@.com</a> or connect on <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a>.</p>
+
+      <form class="contact-form" action="mailto:robinmwaniki3@.com" method="post" enctype="text/plain">
+        <label>
+          Your name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Say hi..." required></textarea>
+        </label>
+        <button type="submit" class="btn">Send email</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Robin— <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small script to update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
