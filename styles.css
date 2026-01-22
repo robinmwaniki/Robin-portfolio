@@ -59,14 +59,36 @@ body{
   .nav{display:none}
 }
 
-.hero-image { display:flex; align-items:center; justify-content:center; }
-.hero-photo{
-  width:200px;        /* adjust as needed */
-  height:200px;
-  border-radius:12px;
-  object-fit:cover;
-  display:block;
+
+
+/* Hero image wrapper */
+.hero-image {
+  flex: 0 0 200px;               /* fixed box in the flex row */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width:880px){
-  .hero-photo{ width:160px; height:160px; }
+
+/* The image itself */
+.hero-photo {
+  width: 100%;
+  height: 200px;                 /* keeps a square-ish hero */
+  max-width: 200px;              /* prevents it from growing too large */
+  border-radius: 12px;
+  object-fit: cover;             /* crop to fill the box without distortion */
+  display: block;
+}
+
+/* Smaller screens: make the photo a bit smaller and center under text */
+@media (max-width: 880px) {
+  .hero-image {
+    flex: none;
+    width: 160px;
+    margin: 0 auto 1rem;        /* centers it below the text */
+  }
+  .hero-photo {
+    width: 100%;
+    height: 160px;
+    max-width: 160px;
+  }
 }
