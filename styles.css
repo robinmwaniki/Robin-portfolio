@@ -58,3 +58,15 @@ body{
   .hero-image{margin-bottom:1rem}
   .nav{display:none}
 }
+
+.hero-image { display:flex; align-items:center; justify-content:center; }
+.hero-photo{
+  width:200px;        /* adjust as needed */
+  height:200px;
+  border-radius:12px;
+  object-fit:cover;
+  display:block;
+}
+@media (max-width:880px){
+  .hero-photo{ width:160px; height:160px; }
+}
