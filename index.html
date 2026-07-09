@@ -3,105 +3,212 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfolio — Robin Mwaniki. Web developer / Designer / etc." />
-  <title>Robin's— Portfolio</title>
+  <meta name="description" content="Portfolio — Robin Mwaniki. Software Developer based in Nairobi, Kenya." />
+  <title>Robin Mwaniki — Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo"><a href="#">Robin Mwaniki</a></h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">Robin<span>.</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-inner">
-        <div>
-          <h2>Hi, I’m Robin Mwaniki.</h2>
-          <p class="lead">I build accessible, responsive websites and web apps. I’m focused on clean UI and fast performance.</p>
-          <p class="cta">
-            <a class="btn" href="#projects">See my work</a>
-            <a class="btn outline" href="mailto:robinmwaniki3@.com">Hire me</a>
-          </p>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Software Developer · Nairobi, Kenya</p>
+        <h1>Hi, I'm Robin Mwaniki.</h1>
+        <p class="lead">
+          I build reliable, well-structured web applications — from Spring Boot
+          backends with secure authentication to clean, responsive front-ends.
+          Currently developing fintech systems as part of my industrial attachment.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn btn-outline" href="#contact">Get in touch</a>
         </div>
-        <div class="hero-image" aria-hidden="false">
-  <img
-    src="image.jpeg"
-    alt="Robin Mwaniki"
-    class="hero-photo"
-    width="400"
-    height="400"
-    loading="lazy"
-    decoding="async"
-  >
-</div>
       </div>
-    </section>
 
-    <section id="about" class="container about">
-      <h3>About</h3>
-      <p>Short paragraph about you. Mention where you’re based, the tech you use (HTML, CSS, JavaScript, React, etc.), and what you enjoy building.</p>
-      <p>Quick highlights: performance, accessibility (a11y), responsive design, and good developer experience.</p>
-    </section>
-
-    <section id="projects" class="container projects">
-      <h3>Projects</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>Project One</h4>
-          <p>Short description of the project and the tech used.</p>
-          <p class="tags">HTML • CSS • JS</p>
-          <p><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
-        </article>
-
-        <article class="card">
-          <h4>Project Two</h4>
-          <p>Short description of the project and the tech used.</p>
-          <p class="tags">React • API</p>
-          <p><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
-        </article>
-
-        <!-- Add more project cards -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <!--
+            TO ADD YOUR OWN PHOTO:
+            1. Place your photo file in this same folder (next to index.html).
+            2. Replace "image.jpeg" below with your file's name, e.g. "profile.jpg".
+            A square photo (at least 500x500px) works best.
+          -->
+          <img
+                  src="image.jpeg"
+                  alt="Portrait of Robin Mwaniki"
+                  class="hero-photo"
+                  width="420"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.closest('.hero-image').classList.add('no-photo')"
+          >
+          <div class="photo-fallback">
+            <span>RM</span>
+            <p>Add your photo — see comment in the code, or replace this block with an &lt;img&gt; tag.</p>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h3>Contact</h3>
-      <p>If you’d like to work together, email me at <a href="mailto:robinmwaniki3@.com">robinmwaniki3@.com</a> or connect on <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a>.</p>
-
-      <form class="contact-form" action="mailto:robinmwaniki3@.com" method="post" enctype="text/plain">
-        <label>
-          Your name
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="4" placeholder="Say hi..." required></textarea>
-        </label>
-        <button type="submit" class="btn">Send email</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Robin— <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a></p>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // small script to update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- ABOUT -->
+  <section id="about" class="container about">
+    <p class="section-label">About</p>
+    <h2>A bit about me</h2>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm a software development intern based in Nairobi, working across
+        full-stack projects built with Java, Spring Boot, Thymeleaf, and MySQL,
+        alongside PHP and JavaScript-based applications. I enjoy taking a project
+        from a rough idea to a working, secure, well-tested product — and I'm
+        especially interested in backend architecture, authentication systems,
+        and building things that are genuinely usable.
+      </p>
+      <ul class="about-highlights">
+        <li><strong>Focus</strong><span>Backend architecture &amp; secure auth</span></li>
+        <li><strong>Currently</strong><span>Enterprise banking system (Spring Boot)</span></li>
+        <li><strong>Based in</strong><span>Nairobi, Kenya</span></li>
+        <li><strong>Approach</strong><span>Clean code, accessibility, performance</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container skills">
+    <p class="section-label">Skills</p>
+    <h2>Tools &amp; technologies</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Java · JavaScript · PHP · SQL</p>
+      </div>
+      <div class="skill-group">
+        <h4>Frameworks</h4>
+        <p>Spring Boot · Spring Security · Thymeleaf · React</p>
+      </div>
+      <div class="skill-group">
+        <h4>Data &amp; Tools</h4>
+        <p>MySQL · MariaDB · Postman · Git &amp; GitHub</p>
+      </div>
+      <div class="skill-group">
+        <h4>Practices</h4>
+        <p>JWT / BCrypt Auth · REST APIs · Responsive Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container projects">
+    <p class="section-label">Projects</p>
+    <h2>Selected work</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card-top">
+          <span class="card-icon" aria-hidden="true">🏦</span>
+          <p class="tags">Spring Boot · Security · Thymeleaf</p>
+        </div>
+        <h4>NexaBank — Banking Management System</h4>
+        <p>An enterprise banking system with role-based access, JWT/BCrypt authentication, and a full Bootstrap 5 front-end.</p>
+        <p class="card-links"><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="card-icon" aria-hidden="true">📚</span>
+          <p class="tags">Spring Boot · MySQL · Bootstrap</p>
+        </div>
+        <h4>Library Management System</h4>
+        <p>A full-stack library system with session-based settings, layout fragments, and MySQL-backed persistence.</p>
+        <p class="card-links"><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="card-icon" aria-hidden="true">💰</span>
+          <p class="tags">PHP · MySQL · APIs</p>
+        </div>
+        <h4>Student Finance Manager</h4>
+        <p>A budgeting app with a currency converter, AI-generated financial tips, receipt scanning (OCR), and email reports.</p>
+        <p class="card-links"><a class="link" href="#" target="_blank" rel="noopener">View project</a> · <a class="link" href="#" target="_blank" rel="noopener">Source</a></p>
+      </article>
+
+      <!-- Add more project cards by copying an <article class="card"> block -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container contact">
+    <p class="section-label">Contact</p>
+    <h2>Let's work together</h2>
+    <p class="contact-intro">
+      If you'd like to work together, email me at
+      <a href="mailto:robinmwaniki3@example.com">robinmwaniki3@example.com</a>
+      or connect on <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+
+    <form class="contact-form" action="mailto:robinmwaniki3@example.com" method="post" enctype="text/plain">
+      <label>
+        Your name
+        <input type="text" name="name" placeholder="Your name" required>
+      </label>
+      <label>
+        Your email
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="4" placeholder="Say hi..." required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Send message</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Robin Mwaniki</p>
+    <a href="https://github.com/robinmwaniki" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.querySelector('.nav');
+  navToggle.addEventListener('click', () => {
+    const open = document.body.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>
